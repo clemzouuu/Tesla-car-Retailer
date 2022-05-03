@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla</title>
+    <link rel="stylesheet" href="car_pages.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <a href="index.html"><img src="img/logo.svg" height="200px" width="200px"></a>
+            <ul class="link-group">
+                <li class="link"><a href="modele_s.html">Model S</a></li>
+                <li class="link"><a href="modele_3.html">Model 3</a></li>
+                <li class="link"><a href="modele_x.html">Model X</a></li>
+                <li class="link"><a href="modele_y.html">Model Y</a></li>
+                <li class="link"><a href="cybertruck.html">Cyber Truck</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="modele_x">
+        <img src="img/modele_x_2.jpeg" id="img3">
+    </div>
+
+    <div id="container">
+        <p id="text01"></p>
+        <p id="text02"></p>
+        <p id="text03"></p>
+        <a href= "order.html">
+            <input type="button" value="Order" id="order02">
+        </a>
+    </div>
+ 
+     
+    <footer></footer>
+
+    <script src="app.js"></script>
+
+    <script>
+        let modele_x = new Car ("Tesla","Model X","Color : White", "180km/h","7 seats","750km",304,120000)
+
+        document.getElementById('text01').innerHTML = modele_x.brand +" "+ modele_x.modele
+        document.getElementById('text02').innerHTML = "Max speed" + " " + modele_x.speed + " " + "autonomy" + " " +  modele_x.autonomy
+        document.getElementById('text03').innerHTML = modele_x.color + " " + modele_x.seats + " " 
+    </script>
+</body>
+</html>

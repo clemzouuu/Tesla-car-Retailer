@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla</title>
+    <link rel="stylesheet" href="car_pages.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <a href="index.html"><img src="img/logo.svg" height="200px" width="200px"></a>
+            <ul class="link-group">
+                <li class="link"><a href="modele_s.html" style="color :white";>Model S</a></li>
+                <li class="link"><a href="modele_3.html" style="color :white";>Model 3</a></li>
+                <li class="link"><a href="modele_x.html" style="color :white";>Model X</a></li>
+                <li class="link"><a href="modele_y.html" style="color :white";>Model Y</a></li>
+                <li class="link"><a href="#modele_ct" style="color :white";>Cyber Truck</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="modele_ct">
+        <img src="img/cybertruck_2.jpg" id="img5">
+    </div>
+
+    <div id="container">
+        <p id="text01"></p>
+        <p id="text02"></p>
+        <p id="text03"></p>
+        <p id="text04"></p>
+        <a href= "order.html">
+            <input type="button" value="Order" id="order03">
+        </a>
+    </div>
+ 
+
+    <footer></footer>
+
+    <script src="app.js"></script>
+
+    <script>
+        let modele_ct = new Truck ("Tesla","Cyber Truck","Color : Metal", "200km/h","5 seats","1000km",1,300000,0,"2 tonnes")
+        document.getElementById('text01').innerHTML = modele_ct.brand +" "+ modele_ct.modele 
+        document.getElementById('text02').innerHTML = "Max speed" + " " + modele_ct.speed + " " + "autonomy" + " " +  modele_ct.autonomy
+        document.getElementById('text03').innerHTML = modele_ct.color + " " + modele_ct.seats 
+        document.getElementById('text04').innerHTML = "Weight : " + modele_ct.poids
+    </script>
+</body>
+</html>
